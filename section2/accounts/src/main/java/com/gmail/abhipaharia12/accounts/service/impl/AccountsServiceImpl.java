@@ -49,7 +49,7 @@ public class AccountsServiceImpl implements IAccountsService{
         customer.setCreatedBy("anonymous");
         Customer savedCustomer = customerRepository.save(customer);
         Accounts accounts = createNewAccount(savedCustomer);
-        Accounts savedAccounts = accountsRepository.save(accounts);
+        accountsRepository.save(accounts);
     }
 
     private Accounts createNewAccount(Customer customer) {
