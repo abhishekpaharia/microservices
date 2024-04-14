@@ -5,20 +5,29 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gmail.abhipaharia12.accounts.constants.AccountConstants;
+import com.gmail.abhipaharia12.accounts.constants.AccountsConstants;
+import com.gmail.abhipaharia12.accounts.dto.CustomerDto;
 import com.gmail.abhipaharia12.accounts.dto.ResponseDto;
+import com.gmail.abhipaharia12.accounts.service.IAccountsService;
+
+import lombok.AllArgsConstructor;
 
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
+@AllArgsConstructor
 public class AccountsController {
 
+    private IAccountsService iAccountsService;
+
     @PostMapping("/create")
-    public ResponseEntity<ResponseDto> createAccount(){
+    public ResponseEntity<ResponseDto> createAccount(@RequestBody CustomerDto customerDto){
+        iAccountsService.createAccount(customerDto);
         return ResponseEntity
             .status(HttpStatus.CREATED)
-            .body(new ResponseDto(AccountConstants.STATUS_201, AccountConstants.MESSAGE_201));
+            .body(new ResponseDto(AccountsConstants.STATUS_201, AccountsConstants.MESSAGE_201));
     }
 }

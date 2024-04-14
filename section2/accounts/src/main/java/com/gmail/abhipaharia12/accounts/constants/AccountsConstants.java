@@ -1,7 +1,7 @@
 package com.gmail.abhipaharia12.accounts.constants;
 
-public class AccountConstants {
-    private AccountConstants(){
+public class AccountsConstants {
+    private AccountsConstants(){
         
     }
 
