@@ -10,3 +10,7 @@ while making microservices.
 - section 6: It about management of configuration in micoservices
   - 3 ways of accesing properties from properties files
   - spring profiles for dev, QA, and prod environment.
+  - Externalizing configurations using command-line, JVM & environment options
+  - Building Config Server using Spring Cloud Config
+  - Reading configurations by 3 ways in Config Serv - class path of config server, file system of server, github repo for config data.
+  - Encryption & Decryption of properties inside Config server
