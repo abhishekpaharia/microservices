@@ -14,3 +14,4 @@ while making microservices.
   - Building Config Server using Spring Cloud Config
   - Reading configurations by 3 ways in Config Serv - class path of config server, file system of server, github repo for config data.
   - Encryption & Decryption of properties inside Config server
+  - Refresh configurations at runtime using refresh actuator path in a microservices without restarting it.
