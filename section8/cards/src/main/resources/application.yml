@@ -9,7 +9,7 @@ spring:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
     username: sa
-    password: ''
+    password: ""
   h2:
     console:
       enabled: true
@@ -46,6 +46,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8070/eureka/
 
+# info for client registration to eureka service registry. "cards" is name by which this ms will register in eureka server
 info:
   app:
     name: "cards"
